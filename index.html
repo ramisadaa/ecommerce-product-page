@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="nav">
+  <button class="menu-toggle icon-button" aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><img src="./images/icon-menu.svg" alt=""></button>
+  <a href="#" class="brand" aria-label="Sneakers home"><img src="./images/logo.svg" alt="sneakers" class="logo"></a>
+  <div class="menu-backdrop" hidden></div>
+  <nav id="navigation" aria-label="Main navigation">
+    <button class="menu-close icon-button" aria-label="Close menu"><img src="./images/icon-close.svg" alt=""></button>
+    <ul><li><a href="#">Collections</a></li><li><a href="#">Men</a></li><li><a href="#">Women</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
+  </nav>
+  <div class="account">
+    <button class="cart icon-button" aria-label="Open cart" aria-expanded="false" aria-controls="cart-panel"><img src="./images/icon-cart.svg" alt=""><span class="cart-quantity" hidden>0</span></button>
+    <img src="./images/image-avatar.png" alt="Your profile" class="avatar">
+  </div>
+  <section class="cartpop" id="cart-panel" aria-labelledby="cart-title" hidden><h2 id="cart-title">Cart</h2><div class="cart-content"></div></section>
+</header>
+<main class="main">
+  <section class="review" aria-label="Product gallery">
+    <div class="display"><button class="image-open" aria-label="Open product image gallery"><img src="./images/image-product-1.jpg" alt="Beige and white sneakers on an orange background" class="display-img"></button><button class="gallery-arrow previous mobile-arrow" aria-label="Previous image"><img src="./images/icon-previous.svg" alt=""></button><button class="gallery-arrow next mobile-arrow" aria-label="Next image"><img src="./images/icon-next.svg" alt=""></button></div>
+    <div class="myphoto">
+      <button class="thumbnail active" data-image="0" aria-label="View product image 1" aria-pressed="true"><img src="./images/image-product-1-thumbnail.jpg" alt=""></button>
+      <button class="thumbnail" data-image="1" aria-label="View product image 2" aria-pressed="false"><img src="./images/image-product-2-thumbnail.jpg" alt=""></button>
+      <button class="thumbnail" data-image="2" aria-label="View product image 3" aria-pressed="false"><img src="./images/image-product-3-thumbnail.jpg" alt=""></button>
+      <button class="thumbnail" data-image="3" aria-label="View product image 4" aria-pressed="false"><img src="./images/image-product-4-thumbnail.jpg" alt=""></button>
+    </div>
+  </section>
+  <section class="details" aria-labelledby="product-title">
+    <p class="company">Sneaker Company</p><h1 id="product-title">Fall Limited Edition Sneakers</h1>
+    <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    <div class="pricing"><div class="current-price"><p class="price">$125.00</p><span class="discount">50%</span></div><p class="original-price">$250.00</p></div>
+    <div class="pay"><div class="quantity-control"><button class="minus icon-button" aria-label="Decrease quantity"><img src="./images/icon-minus.svg" alt=""></button><output class="quantity" aria-live="polite">0</output><button class="plus icon-button" aria-label="Increase quantity"><img src="./images/icon-plus.svg" alt=""></button></div><button class="add-to-cart"><img src="./images/icon-cart.svg" alt="">Add to cart</button></div>
+    <p class="sr-only" id="cart-status" role="status"></p>
+  </section>
+</main>
+<dialog class="lightbox" aria-label="Product image gallery"><button class="lightbox-close icon-button" aria-label="Close gallery"><img src="./images/icon-close.svg" alt=""></button><div class="lightbox-display"><img class="lightbox-image" src="./images/image-product-1.jpg" alt="Product image 1"><button class="gallery-arrow previous" aria-label="Previous image"><img src="./images/icon-previous.svg" alt=""></button><button class="gallery-arrow next" aria-label="Next image"><img src="./images/icon-next.svg" alt=""></button></div><div class="myphoto lightbox-thumbnails"></div></dialog>
+</body>
+</html>
